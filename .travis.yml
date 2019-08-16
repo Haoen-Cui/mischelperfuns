@@ -1,9 +1,26 @@
 language: R
+
+# caches $HOME/R/Library, and sets R_LIB_USER=$HOME/R/Library environment variable.
 cache: packages
 
+# only clone most recent commit 
+git:
+  depth: 1
+
+# ignore warnings 
+warnings_are_errors: false
+
+# configure R CMD ... arguments 
+env:
+  global:
+    - R_BUILD_ARGS="--no-build-vignettes --no-manual --no-resave-data"
+    - R_CHECK_ARGS="--no-build-vignettes --no-manual"
+
+# update documentation and build site 
 after_success:
   - Rscript -e 'pkgdown::build_site()'
 
+# deploy to gh-pages branch 
 deploy:
   provider: pages
   skip-cleanup: true
