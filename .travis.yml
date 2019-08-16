@@ -1,5 +1,8 @@
 language: R
 
+# caches $HOME/R/Library, and sets R_LIB_USER=$HOME/R/Library environment variable.
+cache: packages
+
 # only clone most recent commit 
 git:
   depth: 1
