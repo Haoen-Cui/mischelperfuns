@@ -17,6 +17,7 @@ Suggests:
     knitr 
 License: MIT + file LICENSE
 Encoding: UTF-8
+URL: https://haoen-cui.github.io/mischelperfuns
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
