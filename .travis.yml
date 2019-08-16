@@ -18,6 +18,7 @@ env:
 
 # update documentation and build site 
 after_success:
+  - Rscript -e 'devtools::document()'
   - Rscript -e 'pkgdown::build_site()'
 
 # deploy to gh-pages branch 
