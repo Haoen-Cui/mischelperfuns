@@ -7,6 +7,12 @@ cache: packages
 git:
   depth: 1
 
+# configure R CMD ... arguments 
+env:
+  global:
+    - R_BUILD_ARGS="--no-build-vignettes --no-manual"
+    - R_CHECK_ARGS="--no-build-vignettes --no-manual"
+
 # update documentation and build site 
 after_success:
   - Rscript -e 'pkgdown::build_site()'
