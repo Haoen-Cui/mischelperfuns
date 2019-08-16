@@ -1,9 +1,14 @@
 language: R
-cache: packages
 
+# only clone most recent commit 
+git:
+  depth: 1
+
+# update documentation and build site 
 after_success:
   - Rscript -e 'pkgdown::build_site()'
 
+# deploy to gh-pages branch 
 deploy:
   provider: pages
   skip-cleanup: true
