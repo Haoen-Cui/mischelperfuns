@@ -1,5 +1,11 @@
-#' Check Package Installation Status and Install If Missing Upon Request 
-#'
+#' @export 
+#' @name InstallPackagesIfNotAlready 
+#' @title Install Packages with Checks 
+#' @description Check Package Installation Status and Install If Missing Upon Request 
+#' @author Haoen Cui 
+#' 
+#' @importFrom utils install.packages 
+#' 
 #' @param pkgs (character vector) names of packages to check installation status. 
 #' @param install_if_not (logical) whether to install missing packages or not. 
 #' @param return_status (logical) whether to return package installation status or not. 
@@ -12,7 +18,14 @@
 #'     named after the packages names as specified in \code{pkgs}. 
 #' 
 #' @examples 
-#' InstallPackagesIfNotAlready(c("MASS", "knitr"), return_status = TRUE)
+#' \dontrun{
+#' InstallPackagesIfNotAlready(
+#'   pkgs = c("MASS", "knitr"), 
+#'   install_if_not = TRUE, 
+#'   return_status = FALSE, 
+#'   verbose = FALSE
+#' )
+#' }
 InstallPackagesIfNotAlready <- function(pkgs, 
                                         install_if_not = TRUE, 
                                         return_status = FALSE, 
@@ -22,7 +35,7 @@ InstallPackagesIfNotAlready <- function(pkgs,
     length( find.package(pkg, quiet = TRUE, verbose = FALSE) ) )) 
   # install missing packages 
   if ( install_if_not & !all(isInstalled) ) {
-    tryCatch(install.packages(pkgs[!isInstalled]), 
+    tryCatch(utils::install.packages(pkgs[!isInstalled]), 
              error = function(e) e)
   }
   # return and/or print installation status 
