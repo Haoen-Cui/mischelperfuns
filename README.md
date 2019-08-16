@@ -4,6 +4,8 @@ Haoen Cui's personal collection of miscellaneous helper functions in R.
 
 > Good tools are prerequisite to the success of a job. 
 
+> 工欲善其事，必先利其器。---- 《论语·卫灵公》
+
 ### Installation
 
 ```
