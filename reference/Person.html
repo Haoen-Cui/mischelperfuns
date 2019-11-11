@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • mischelperfuns</title>
+<title>R6 class for a person — Person • mischelperfuns</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="R6 class for a person — Person" />
+<meta property="og:description" content="Description of the class." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -54,7 +56,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -96,72 +98,81 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>R6 class for a person</h1>
+    
+    <div class="hidden name"><code>Person.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Description of the class.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>Person</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="InstallPackagesIfNotAlready.html">InstallPackagesIfNotAlready()</a></code> </p>
-        </td>
-        <td><p>Install Packages with Checks</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="Person.html">Person</a></code> </p>
-        </td>
-        <td><p>R6 class for a person</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="func_1.html">func_1()</a></code> </p>
-        </td>
-        <td><p>Dummy Function #1 To be Wrapped</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="func_2.html">func_2()</a></code> </p>
-        </td>
-        <td><p>Dummy Function #2 To be Wrapped</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mischelperfuns.html">mischelperfuns</a></code> </p>
-        </td>
-        <td><p>mischelperfuns: Miscellaneous R Helper Functions for Haoen Cui</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="wrapper_funcs.html">wrapper_funcs()</a></code> </p>
-        </td>
-        <td><p>Dummy Function #2 To be Wrapped</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>name</th>
+      <td><p>First name.</p></td>
+    </tr>
+    <tr>
+      <th>hair</th>
+      <td><p>Hair color, if known.</p></td>
+    </tr>
+    <tr>
+      <th>val</th>
+      <td><p>The new hair color.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>R6ClassGenerator</code> of length 24.</p>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A person object.</p>
+<p>The new color, invisibly.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Details of the class.</p>
+<p>Create a new <code>Person</code> object.</p>
+<p>Set new hair color.</p>
+<p>Make the person greet.</p>
+    <h2 class="hasAnchor" id="public-fields"><a class="anchor" href="#public-fields"></a>Public fields</h2>
+
+    
+
+<ul>
+<li><p><code>name</code>: first name.</p></li>
+<li><p><code>hair</code>: hair color.</p></li>
+</ul>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>Person</span>$<span class='fu'>new</span>(<span class='st'>"Ann"</span>, <span class='st'>"black"</span>)</div><div class='output co'>#&gt; Hello, my name is Ann.</div><div class='output co'>#&gt; &lt;Person&gt;
+#&gt;   Public:
+#&gt;     clone: function (deep = FALSE) 
+#&gt;     greet: function () 
+#&gt;     hair: black
+#&gt;     initialize: function (name = NA, hair = NA) 
+#&gt;     name: Ann
+#&gt;     set_hair: function (val) </div><div class='input'><span class='no'>ann</span> <span class='kw'>&lt;-</span> <span class='no'>Person</span>$<span class='fu'>new</span>(<span class='st'>"Ann"</span>, <span class='st'>"black"</span>)</div><div class='output co'>#&gt; Hello, my name is Ann.</div><div class='input'><span class='no'>ann</span>$<span class='no'>hair</span></div><div class='output co'>#&gt; [1] "black"</div><div class='input'><span class='no'>ann</span>$<span class='fu'>set_hair</span>(<span class='st'>"red"</span>)
+<span class='no'>ann</span>$<span class='no'>hair</span></div><div class='output co'>#&gt; [1] "red"</div><div class='input'><span class='no'>ann</span> <span class='kw'>&lt;-</span> <span class='no'>Person</span>$<span class='fu'>new</span>(<span class='st'>"Ann"</span>, <span class='st'>"black"</span>)</div><div class='output co'>#&gt; Hello, my name is Ann.</div><div class='input'><span class='no'>ann</span>$<span class='fu'>greet</span>()</div><div class='output co'>#&gt; Hello, my name is Ann.</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#format">Format</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#public-fields">Public fields</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
