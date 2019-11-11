@@ -2,7 +2,7 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/Haoen-Cui/mischelperfuns.svg?branch=master)](https://travis-ci.org/Haoen-Cui/mischelperfuns)
 
-Haoen Cui's personal collection of miscellaneous helper functions in R. 
+Haoen Cui's personal collection of miscellaneous helper functions in R. Some functions are more informative themselves (either in code or in documentation) than their actual usefulness. 
 
 > Good tools are prerequisite to the success of a job. 
 

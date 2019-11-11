@@ -5,9 +5,12 @@ Authors@R: as.person(c(
     "Haoen Cui <cuihaoen.opensource@gmail.com> [aut, cre]"
   ))
 Description: Haoen Cui's personal collection of miscellaneous 
-  helper functions in R. 
+  helper functions in R. Some functions are more informative 
+  themselves (either in code or in documentation) than their 
+  actual usefulness. 
 Depends: R (>= 3.5.0) 
 Imports:
+    R6, 
     utils 
 Suggests:
     devtools,
@@ -20,4 +23,4 @@ Encoding: UTF-8
 URL: https://haoen-cui.github.io/mischelperfuns
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 6.1.99.9001
