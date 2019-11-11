@@ -18,6 +18,8 @@ env:
 
 # update documentation and build site 
 after_success:
+  # temporary solution to install the latest roxygen2 package before it hits CRAN
+  - Rscript -e 'devtools::install_github("r-lib/roxygen2")'
   - Rscript -e 'devtools::document()'
   - Rscript -e 'pkgdown::build_site()'
 
